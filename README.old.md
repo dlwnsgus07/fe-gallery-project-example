@@ -1,1 +1,0 @@
-# fe-gallery-project-reference

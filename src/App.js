@@ -6,8 +6,9 @@ import HomePage from "./pages/HomePage";
 import ImagePage from "./pages/ImagePage";
 
 const GlobalStyle = createGlobalStyle`
-  body {
-    background-color: #fafafa;
+  * {
+    outline: none;
+    box-sizing: border-box;
   }
 `;
 

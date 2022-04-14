@@ -3,7 +3,7 @@ import styled from "styled-components";
 import lionImage from "./images/lion.png";
 
 const Wrapper = styled.div`
-  padding: 15px;
+  padding: 40px 15px;
   display: flex;
 `;
 
@@ -35,7 +35,7 @@ const PostCount = styled.p`
   font-size: 14px;
 `;
 
-const Profile = () => {
+const Profile = ({ postCount }) => {
   return (
     <Wrapper>
       <div>
@@ -46,7 +46,7 @@ const Profile = () => {
         <Introduce>
           멋쟁이사자처럼 10기 여러분의 소중한 추억들을 보관합니다 😎
         </Introduce>
-        <PostCount> 게시물 40개 </PostCount>
+        <PostCount> 게시물 {postCount}개 </PostCount>
       </VerticalCenter>
     </Wrapper>
   );

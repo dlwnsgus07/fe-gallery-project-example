@@ -1,8 +1,8 @@
+import { Link } from "react-router-dom";
 import styled from "styled-components";
 
 const Wrapper = styled.div`
   aspect-ratio: 1;
-  cursor: pointer;
 `;
 
 const Image = styled.div`
@@ -30,13 +30,15 @@ const Description = styled.p`
   color: #adb5bd;
 `;
 
-const GridImage = ({ image }) => {
+const GridImage = ({ imageId, image, title, description }) => {
   return (
     <Wrapper>
-      <Image image={image} />
+      <Link to={`/${imageId}`}>
+        <Image image={image} />
+      </Link>
       <TextWrapper>
-        <Title>이미지 제목</Title>
-        <Description>이미지 설명</Description>
+        <Title>{title}</Title>
+        <Description>{description}</Description>
       </TextWrapper>
     </Wrapper>
   );

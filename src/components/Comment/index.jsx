@@ -1,5 +1,7 @@
 import styled from "styled-components";
 
+import * as commentApi from "../../apis/commentApi";
+
 const Wrapper = styled.div`
   margin-bottom: 10px;
   display: flex;
@@ -23,12 +25,12 @@ const DeleteButton = styled.button`
   cursor: pointer;
 `;
 
-const Comment = ({ author, content }) => {
+const Comment = ({ author, content, onDelete }) => {
   return (
     <Wrapper>
       <Author> {author} </Author>
       <Content> {content} </Content>
-      <DeleteButton>삭제</DeleteButton>
+      <DeleteButton onClick={onDelete}>삭제</DeleteButton>
     </Wrapper>
   );
 };

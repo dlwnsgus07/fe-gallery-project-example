@@ -4,6 +4,7 @@ import { createGlobalStyle } from "styled-components";
 
 import HomePage from "./pages/HomePage";
 import ImagePage from "./pages/ImagePage";
+import ArticleCreateForm from "./pages/ArticleCreateForm";
 
 const GlobalStyle = createGlobalStyle`
   * {
@@ -13,6 +14,7 @@ const GlobalStyle = createGlobalStyle`
 `;
 
 const App = () => {
+
   return (
     <>
       <Reset />
@@ -20,6 +22,7 @@ const App = () => {
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/:id" element={<ImagePage />} />
+        <Route path="/create" element={<ArticleCreateForm />} />
       </Routes>
     </>
   );
